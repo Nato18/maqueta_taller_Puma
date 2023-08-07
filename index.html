@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retela</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <body>
+            <div class="main-nav bg-2">
+                <div class="nav-body">
+                    <div></div>
+                    <div class="nav-bar">
+                        <div class="nav-item os-400 text-black f-20" onclick="inicio()">Crea Tu cuadro</div>
+                        <div class="nav-item os-400 text-black f-20"><a href="">Servicios</a></div>
+                        <div class="nav-item os-400 text-black f-20"><a href="">Insumos</a></div>
+                        <div class="nav-item os-400 text-black f-20"><a href="">Quienes Somos</a></div>
+                        <div class="nav-item os-400 text-black f-20" onclick="verCarrito()"><img src="assets/svg/carro.svg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </body>
+        <div class="servicio">
+            <div class="separacion-cuadro">
+                <div class="flex f-direction-c mb-40">
+                    <div>
+                        <div class="text-center os-700 f-24 p-10">Crea tu Cuadro</div>
+                        <div>
+                            <ul class="progreso">
+                                <li class="step-actual os-700 f-20">1</li>
+                                <li class="step-prox os-700 f-20">2</li>
+                                <li class="step-prox os-700 f-20">3</li>
+                                <li class="step-prox os-700 f-20">4</li>
+                                <!-- <li class="step-prox os-700 f-20">5</li> -->
+                            </ul>
+                        </div>
+                    </div>
+            
+            
+                    <div id="paso-1">
+                        <div class="container mt-40">
+                            <div class="flex f-align-items-center g-15">
+                                <img src="assets/svg/tuerca.svg" alt="">
+                                <div class="f-18 os-700">Servicios</div>
+                            </div>
+                        </div>
+                        <div class="container mt-40">
+                            <div class="os-400 f-18 text-black">¿Que tipo de servicio necesitas?</div>
+                        </div>
+                        <div class="container mt-20">
+                            <div class="servicios">
+                                <button class="pointer btn-servicio" id="btnEnmarcaciones">Enmarcación</button>
+                                <button class="pointer btn-servicio">Enmarcación + Impresion</button>
+                                <button class="pointer btn-servicio">Marco "Hazlo tu mismo"</button>
+                                <button class="pointer btn-servicio">Espejo enmarcado</button>
+                            </div>
+                        </div>
+                        <div class="container mt-50">
+                            <div class="os-400 f-18 text-black">Descripción de servicios</div>
+                            <div class="des-servicios">
+                                <div class="flex f-align-items-center g-15">
+                                    <img src="assets/svg/enmarcacion.svg" alt="">
+                                    <div class="os-400 f-16"><span class="os-700">Enmarcación:</span> Ya tienes la obra y solo necesitas enmarcarla. acá podrás hacerlo totalmente personalizado.</div>
+                                </div>
+                                <div class="flex f-align-items-center g-15">
+                                    <img src="assets/svg/hazloTu.svg" alt="">
+                                    <div class="os-400 f-16"><span class="os-700"> Marco "Hazlo tu mismo":</span> Ya tienes la obra y solo quieres el marco a medida para poder enmarcarlo tu mismo. (Conveniente para regiones)</div>
+                                </div>
+                                <div class="flex f-align-items-center g-15">
+                                    <img src="assets/svg/impre-enmar.svg" alt="">
+                                    <div class="os-400 f-16"><span class="os-700">Impresión + enmarcación:</span> Tienes la foto en digital o una idea y quieres que nosotros te la imprimamos y enmarquemos.</div>
+                                </div>
+                                <div class="flex f-align-items-center g-15">
+                                    <img src="assets/svg/espejo.svg" alt="">
+                                    <div class="os-400 f-16"><span class="os-700">Espejo enmarcado:</span> Estás en busca de un espejo, Personaliza el tamaño y el marco que quieras, lucirá hermoso.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-3 flex-cuadro">
+                    <div class="top-text os-600 f-20">Ancho</div>
+                    <div class="flex-cuadro-text">
+                        <div class="left-text os-600 f-20">Largo</div>
+                        <div class="p-cuadro">
+                            <img src="assets/svg/cuadroNegroBlanco.svg" alt="">
+                        </div>
+                        <div class="right-text os-600 f-20">Largo</div>
+                    </div>
+                    <div class="bottom-text os-600 f-20">Ancho</div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="enmarcaciones1">
+            <div class="separacion-cuadro">
+                <div class="flex f-direction-c">
+                    <div>
+                        <div class="text-center os-700 f-24 p-10">Crea tu Cuadro</div>
+                        <div>
+                            <ul class="progreso">
+                                <li class="step-actual os-700 f-20">1</li>
+                                <li class="step-prox os-700 f-20">2</li>
+                                <li class="step-prox os-700 f-20">3</li>
+                                <li class="step-prox os-700 f-20">4</li>
+                                <!-- <li class="step-prox os-700 f-20">5</li> -->
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <div class="enmarcaciones2 container mb-40">
+            
+                        <div class="flex f-align-items-center g-15 mt-40">
+                            <img src="assets/svg/imagen.svg" alt="">
+                            <div class="f-18 os-700">IMAGEN</div>
+                        </div>
+                        <div class="os-700 f-18 mt-40">Tipo de Servicio: Enmarcado</div>
+                        <div class="os-700 f-18 mt-20">Elige en que sentido irá tu cuadro</div>
+                        <div class="radio-list-orientacion mt-30">
+                            <div class="radio-orientacion">
+                                <input type="radio" name="orientacion" id="ori-radio1" value="Vertical">
+                                <label class="os-600" for="ori-radio1">
+                                    <div class="verti">
+                                        Vertical
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-orientacion">
+                                <input type="radio" name="orientacion" id="ori-radio2" value="Horizontal">
+                                <label class="os-600" for="ori-radio2">
+                                    <div class="verti">
+                                        Horizontal
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mt-40 f-18 os-400">Dimensiones: Tamaño de imagen</div>
+                        <div class="mt-20 f-18 os-400">Selecciona la medida exacta de la lámina que deseas enmarcar.</div>
+                        <div class="f-18 os-400"> Posteriormente se te indicará la medida total que tendrá tu cuadro considerando los centímetros del tipo de marco que elijas y si deseas o no añadir paspartú.</div>
+            
+                        <div class="flex mt-20 g-40">
+                            <div class="flex f-align-items-center g-40">
+                                <label for="largo" class="os-700 f-18">Largo</label>
+                                <input name="largo" id="largo" class="medidas border-0  f-18 os-400 text-center largo" type="text" placeholder="000">
+                            </div>
+                            <div class="flex f-align-items-center g-40">
+                                <label for="ancho" class="os-700 f-18">Ancho</label>
+                                <input name="ancho" id="ancho" class=" medidas border-0 f-18 os-400 text-center ancho" type="text" placeholder="000">
+            
+                            </div>
+                        </div>
+                        <div class="mt-20 f-18 os-400">El tamaño de cuadro para tu imagen es de:</div>
+                        <div class="text-center mt-20 os-700">
+                            <span class="valorLargo">000 cm</span> y <span class="valorAncho">000 cm</span>
+                        </div>
+                        <div class="flex f-end text-right text-white mt-40 tw-600 costoProduccion">
+                            <div class="bg-4 actualCosto">Actual costo de producto: </div>
+                            <div class="bg-4 precioCosto"> $0</div>
+                        </div>
+                        <div class="flex mt-40 flex f-justify-between">
+                            <button class="pointer btnVolver f-16 tw-600 text-center text-black volver">Volver</button>
+                            <button class="pointer btnSig f-16 tw-600 text-center text-white siguiente">Siguiente</button>
+                        </div>
+                    </div>
+                    <div style="display:none;" class="enmarcaciones3 container mb-40">
+                        <div class="flex f-align-items-center g-15">
+                            <img src="assets/svg/marco.svg" alt="">
+                            <div class="f-18 os-700">MARCO</div>
+                        </div>
+                        <div class="os-400 f-18 mt-40 mb-15">Modelo de Marco</div>
+                        <div class="flex f-justify-between">
+                            <div class="flex f-direction-c g-10">
+                                <div class="os-600 f-20">Modelo 1</div>
+                                <div class="flex f-justify-center"><img class="imgCuadroPeque" src="assets/svg/cuadroNegroBlancoPequeño.svg" alt=""></div>
+                                <div class="flex g-5 f-justify-center">
+                                    <button onclick="showModal('modal1')" class="pointer btnVer tw-600 f-16">Ver</button>
+                                    <div class="radio-orientacion">
+                                        <input type="radio" name="modelo" id="modelo-radio1" value="Modelo 1">
+                                        <label class="tw-600" for="modelo-radio1">
+                                            <div class="select-model">
+                                                Seleccionar
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <!-- <button onclick="selectModel('Modelo 1')" class="pointer btnSelec text-white tw-600 f-16">Seleccionar</button> -->
+                                </div>
+                            </div>
+                            <div class="flex f-direction-c g-10">
+                                <div class="os-600 f-20">Modelo 2</div>
+                                <div class="flex f-justify-center"><img class="imgCuadroPeque" src="assets/svg/cuadroNegroBlancoPequeño.svg" alt=""></div>
+                                <div class="flex g-5 f-justify-center">
+                                    <button onclick="showModal('modal2')" class="pointer btnVer tw-600 f-16">Ver</button>
+                                    <div class="radio-orientacion">
+                                        <input type="radio" name="modelo" id="modelo-radio2" value="Modelo 2">
+                                        <label class="tw-600" for="modelo-radio2">
+                                            <div class="select-model">
+                                                Seleccionar
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <!-- <button onclick="selectModel('Modelo 2')" class="pointer btnSelec tw-600 f-16">Seleccionar</button> -->
+                                </div>
+                            </div>
+                            <div class="flex f-direction-c g-10">
+                                <div class="os-600 f-20">Modelo 3</div>
+                                <div class="flex f-justify-center"><img class="imgCuadroPeque" src="assets/svg/cuadroNegroBlancoPequeño.svg" alt=""></div>
+                                <div class="flex g-5 f-justify-center">
+                                    <button onclick="showModal('modal2')" class="pointer btnVer tw-600 f-16">Ver</button>
+                                    <div class="radio-orientacion">
+                                        <input type="radio" name="modelo" id="modelo-radio3" value="Modelo 3">
+                                        <label class="tw-600" for="modelo-radio3">
+                                            <div class="select-model">
+                                                Seleccionar
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <!-- <button onclick="selectModel('Modelo 3')" class="pointer btnSelec text-black tw-600 f-16">Seleccionar</button> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-40 os-400 f-18">Color de enmarcación</div>
+                        <div class="mt-40 flex f-justify-between">
+                            <div class="flex f-direction-c f-align-items-center g-5">
+                                <button class="color-negro btnColor pointer">Negro</button>
+                                <div class="os-700 f-18">Negro</div>
+                            </div>
+                            <div class="flex f-direction-c f-align-items-center g-5">
+                                <button class="color-natural btnColor pointer trans-2">Natural</button>
+                                <div class="os-700 f-18">Natural</div>
+                            </div>
+                            <div class="flex f-direction-c f-align-items-center g-5">
+                                <button class="color-champagne btnColor pointer trans-2">Champagne</button>
+                                <div class="os-700 f-18">Champagne</div>
+                            </div>
+                            <div class="flex f-direction-c f-align-items-center g-5">
+                                <button class="color-dorado1 btnColor pointer trans-2">Dorado 1</button>
+                                <div class="os-700 f-18">Dorado 1</div>
+                            </div>
+                            <div class="flex f-direction-c f-align-items-center g-5">
+                                <button class="color-plata btnColor pointer trans-2">Plata</button>
+                                <div class="os-700 f-18">Plata</div>
+                            </div>
+                            <div class="flex f-direction-c f-align-items-center g-5">
+                                <button class="color-dorado2 btnColor trans-2">Dorado 2</button>
+                                <div class="os-700 f-18">Dorado 2</div>
+                            </div>
+                        </div>
+                        <div class="flex mt-40 flex f-justify-between">
+                            <button class="pointer btnVolver f-16 tw-600 text-center text-black volver">Volver</button>
+                            <button class="pointer btnSig f-16 tw-600 text-center text-white siguiente">Siguiente</button>
+                        </div>
+            
+                        <div class="modal-container modal1" id="modal1">
+                            <div class="modal-content">
+                                <div class="flex f-justify-between mb-20 ">
+                                    <div class="tw-700 f-18">Vista de modelo</div>
+                                    <button class="cerrarModal pointer" onclick="closeModal('modal1');"><img src="assets/svg/cerrar.svg" alt=""></button>
+                                </div>
+                                <div class="flex g-40">
+                                    <div>
+                                        <div class="tw-700 f-16">Modelo 1</div>
+                                        <div class="tw-700 f-16 mt-10 mb-10">Información:</div>
+                                        <div class="tw-400 f-16">Se puede colgar horizontal o verticalmente, adaptándose al espacio disponible.</div>
+                                        <div class="tw-400 f-16">Tamaños adaptados para colgar varios para formar un conjunto.</div>
+                                        <div class="tw-400 f-16">Tamaños adaptados para colgar varios para formar un conjunto.</div>
+                                        <div class="tw-400 f-16">Gracias a la protección frontal, los marcos son más ligeros y seguros.</div>
+                                        <div class="tw-700 f-16 mt-10 mb-10">Material y cuidado:</div>
+                                        <div class="tw-400 f-16">Marco: Madera de arce<br>Protector de frente: Plástico de poliestireno<br>Cuidado: Limpiar con un plumero.</div>
+                                    </div>
+                                    <div class="flex f-justify-end f-direction-c g-40">
+                                        <img src="assets/svg/cuadroNegroBlancoModal.svg" alt="">
+                                        <div class="flex f-justify-between">
+                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
+                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
+                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="modal-container modal2" id="modal2">
+                            <div class="modal-content">
+                                <div class="flex f-justify-between mb-20 ">
+                                    <div class="tw-700 f-18">Vista de modelo</div>
+                                    <button class="cerrarModal pointer" onclick="closeModal('modal2');"><img src="assets/svg/cerrar.svg" alt=""></button>
+                                </div>
+                                <div class="flex g-40">
+                                    <div>
+                                        <div class="tw-700 f-16">Modelo 2</div>
+                                        <div class="tw-700 f-16 mt-10 mb-10">Información:</div>
+                                        <div class="tw-400 f-16">Se puede colgar horizontal o verticalmente, adaptándose al espacio disponible.</div>
+                                        <div class="tw-400 f-16">Tamaños adaptados para colgar varios para formar un conjunto.</div>
+                                        <div class="tw-400 f-16">Tamaños adaptados para colgar varios para formar un conjunto.</div>
+                                        <div class="tw-400 f-16">Gracias a la protección frontal, los marcos son más ligeros y seguros.</div>
+                                        <div class="tw-700 f-16 mt-10 mb-10">Material y cuidado:</div>
+                                        <div class="tw-400 f-16">Marco: Madera de arce<br>Protector de frente: Plástico de poliestireno<br>Cuidado: Limpiar con un plumero.</div>
+                                    </div>
+                                    <div class="flex f-justify-end f-direction-c g-40">
+                                        <img src="assets/svg/cuadroNegroBlancoModal.svg" alt="">
+                                        <div class="flex f-justify-between">
+                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
+                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
+                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-container modal3" id="modal3">
+                            <div class="modal-content">
+                                <div class="flex f-justify-between mb-20 ">
+                                    <div class="tw-700 f-18">Vista de modelo</div>
+                                    <button class="cerrarModal pointer" onclick="closeModal('modal3');"><img src="assets/svg/cerrar.svg" alt=""></button>
+                                </div>
+                                <div class="flex g-40">
+                                    <div>
+                                        <div class="tw-700 f-16">Modelo 3</div>
+                                        <div class="tw-700 f-16 mt-10 mb-10">Información:</div>
+                                        <div class="tw-400 f-16">Se puede colgar horizontal o verticalmente, adaptándose al espacio disponible.</div>
+                                        <div class="tw-400 f-16">Tamaños adaptados para colgar varios para formar un conjunto.</div>
+                                        <div class="tw-400 f-16">Tamaños adaptados para colgar varios para formar un conjunto.</div>
+                                        <div class="tw-400 f-16">Gracias a la protección frontal, los marcos son más ligeros y seguros.</div>
+                                        <div class="tw-700 f-16 mt-10 mb-10">Material y cuidado:</div>
+                                        <div class="tw-400 f-16">Marco: Madera de arce<br>Protector de frente: Plástico de poliestireno<br>Cuidado: Limpiar con un plumero.</div>
+                                    </div>
+                                    <div class="flex f-justify-end f-direction-c g-40">
+                                        <img src="assets/svg/cuadroNegroBlancoModal.svg" alt="">
+                                        <div class="flex f-justify-between">
+                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
+                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
+                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div style="display: none;" class="enmarcaciones4 container mb-40">
+                        <div class="flex f-align-items-center g-15 mt-40">
+                            <img src="assets/svg/imagen.svg" alt="">
+                            <div class="f-18 os-700">PASPARTU</div>
+                        </div>
+                        <div class="os-700 f-18 mt-20">¿Qué es el paspartú?</div>
+                        <div class="f-18 os-400 mt-10">Es un contorno que se deja entre la obra y el marco para dar mayor enfoque a la imagen en si, puede ser un pasapartú tradicional el cual se corta tipo ventana para hacerlo calzar perfectamente con tu obra o Digital en donde dejamos un borde blanco en la misma impresión la cual se asemeja a la técnica tradicional.</div>
+            
+                        <div class="os-600 f-18 mt-20">Paspartu</div>
+                        <div class="radio-list mt-30">
+                            <div class="radio-paspartu">
+                                <input type="radio" name="radioPas" id="radio1" value="Tradicional">
+                                <label class="os-600 btnPaspartu" for="radio1">Tradicional</label>
+                            </div>
+                            <div class="radio-paspartu">
+                                <input type="radio" name="radioPas" id="radio2" value="Sin Paspartú">
+                                <label class="os-600 btnPaspartu" for="radio2">Sin Paspartú</label>
+                            </div>
+                        </div>
+                        <div class="os-600 f-18 mt-30">Ancho Paspartú</div>
+                        <div class="radio-list mt-30">
+                            <div class="radio-ancho">
+                                <input type="radio" name="radioAnchoPas" id="3cm" value="3">
+                                <label class="os-600" for="3cm">3 cm</label>
+                            </div>
+                            <div class="radio-ancho">
+                                <input type="radio" name="radioAnchoPas" id="5cm" value="5">
+                                <label class="os-600" for="5cm">5 cm</label>
+                            </div>
+                            <div class="radio-ancho">
+                                <input type="radio" name="radioAnchoPas" id="8cm" value="8">
+                                <label class="os-600" for="8cm">8 cm</label>
+                            </div>
+                            <div class="radio-ancho">
+                                <input type="radio" name="radioAnchoPas" id="10cm" value="10">
+                                <label class="os-600" for="10cm">10 cm</label>
+                            </div>
+                        </div>
+                        <div class="mt-30 os-600">Tipo de paspartú</div>
+                        <div class="radio-list mt-30">
+                            <div class="radio-tipo">
+                                <input type="radio" name="radioTipo" id="pasNegro" value="Negro">
+                                <label for="pasNegro"><img src="assets/svg/paspartuNegro.svg" alt=""></label>
+                            </div>
+                            <div class="radio-tipo">
+                                <input type="radio" name="radioTipo" id="pasBlanco" value="Blanco">
+                                <label for="pasBlanco"><img src="assets/svg/paspartuBlanco.svg" alt=""></label>
+                            </div>
+                            <div class="radio-tipo">
+                                <input type="radio" name="radioTipo" id="pasSin" value="Sin Paspartu">
+                                <label for="pasSin"> <img src="assets/svg/paspartuSin.svg" alt=""></label>
+                            </div>
+                        </div>
+            
+            
+                        <div class="flex mt-40 flex f-justify-between">
+                            <button class="pointer btnVolver f-16 tw-600 text-center text-black volver">Volver</button>
+                            <!-- <button class="pointer btnSig f-16 tw-600 text-center text-white" onclick="showModal('modal_agregarCarrito')">Siguiente</button> -->
+                            <button class="pointer btnSig f-16 tw-600 text-center text-white" onclick="window.modal_agregarCarrito.showModal();">Siguiente</button>
+                        </div>
+                    </div>
+                    <!---
+                    <div style="display: none;" class="enmarcaciones5 container mb-40">
+                        <div class="flex f-align-items-center g-15 mt-40">
+                            <img src="assets/svg/imagen.svg" alt="">
+                            <div class="f-18 os-700">ORIENTACION DE CUADRO</div>
+                        </div>
+                        <div class="os-400 f-18 mt-30">Terminación</div>
+                        <div class="radio-list-terminacion flex mt-30">
+                            <div class="radio-terminacion">
+                                <input type="radio" name="terminacion" id="ter-radio1" value="Gancho tipo peineta en esquina">
+                                <label class="os-600" for="ter-radio1">
+                                    <div class="verti">
+                                        Gancho tipo peineta en esquina
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-terminacion">
+                                <input type="radio" name="terminacion" id="ter-radio2" value="Plano">
+                                <label class="os-600" for="ter-radio2">
+                                    <div class="verti">Plano</div>
+                                </label>
+                            </div>
+                            <div class="radio-terminacion">
+                                <input type="radio" name="terminacion" id="ter-radio3" value="Bombé">
+                                <label class="os-600" for="ter-radio3">
+                                    <div class="verti">
+                                        Bombé
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-terminacion">
+                                <input type="radio" name="terminacion" id="ter-radio4" value="Encaje en esquina">
+                                <label class="os-600" for="ter-radio4">
+                                    <div class="verti">
+                                        Encaje en esquina
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-terminacion">
+                                <input type="radio" name="terminacion" id="ter-radio5" value="Batea">
+                                <label class="os-600" for="ter-radio5">
+                                    <div class="verti">
+                                        Batea
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-terminacion">
+                                <input type="radio" name="terminacion" id="ter-radio6" value="Moldura en bara">
+                                <label class="os-600" for="ter-radio6">
+                                    <div class="verti">
+                                        Moldura en bara
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="flex mt-50 flex f-justify-between">
+                            <button class="pointer btnVolver f-16 tw-600 text-center text-black volver">Volver</button>
+                            <button class="pointer btnSig f-16 tw-600 text-center text-white siguiente">Siguiente</button>
+                        </div>
+                    </div>
+                    --->
+                </div>
+            
+                <div class="bg-3 flex-cuadro">
+                    <div>
+                        <div class="top-text os-600 f-20">Ancho</div>
+                        <div class="flex-cuadro-text">
+                            <div class="left-text os-600 f-20">Largo</div>
+                            <div class="p-cuadro">
+                                <img src="assets/svg/cuadroNegroBlanco.svg" alt="">
+                            </div>
+                            <div class="right-text os-600 f-20">Largo</div>
+                        </div>
+                        <div class="bottom-text os-600 f-20">Ancho</div>
+                    </div>
+                    <div class="flex f-align-items-center f-justify-between container mt-40">
+                        <div class="flex f-align-items-center g-15">
+                            <div><img src="assets/svg/cuadroNegroBlancoChico.svg" alt=""></div>
+                            <div class="os-600 f-20">Imagen</div>
+                        </div>
+                        <div class="bg-white cuadroLargoAncho os-600 f-20 border-10">Largo <span class="valorLargo text-gray">00.0 cm</span> X <span class="valorAncho text-gray">00.0 cm</span>
+                        </div>
+                    </div>
+                    <div style="display:none;" class="flex f-align-items-center f-justify-between container mt-20 cuadroEnmarcaciones3">
+                        <div class="flex f-align-items-center g-15">
+                            <img src="assets/svg/imgNegro.svg" alt="">
+                            <div class="os-600 f-20">Area total cuadro</div>
+                        </div>
+                        <div class="bg-white cuadroLargoAncho os-600 f-20 border-10">Largo <span class="valorLargo text-gray">00.0 cm</span> X <span class="valorAncho text-gray">00.0 cm</span></div>
+                    </div>
+                    <div style="display:none;" class="flex f-align-items-center f-justify-between container mt-20 cuadroEnmarcaciones4">
+                        <div class="flex f-align-items-center g-15">
+                            <img src="assets/svg/paspartuCuadro.svg" alt="">
+                            <div class="os-600 f-20">Passeportout</div>
+                        </div>
+                        <div class="bg-white cuadroLargoAncho os-600 f-20 border-10"><span class="valorPassport text-gray">00 cm</span> ancho</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Modal agregar a carrito -->
+            <dialog class="modal__agregarCarrito" id="modal_agregarCarrito">
+                <div class="tw-700 f-18">Especificaciones y materiales de tu cuadro</div>
+                <div class="text-center f-16 tw-400 mt-20">Maravilloso! ya tienes tu cuadro casi listo. Te detallamos la materialidad y especificaciones del mismo.</div>
+                <div class="grid-modal g-30 mt-20">
+                    <div>
+                        <div class="p-cuadro">
+                            <img class="cuadroCarrito" src="assets/svg/cuadroNegroBlanco.svg" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="tw-700 f-16">Impresion: <span class="tw-400 f-16">Tintas Epson Ultrachrome en base a agua.</span></div>
+                        <div class="tw-700 f-16 mt-10">Papel: <span class="tw-400 f-16">fotográfico Luster de 260 grs.</span></div>
+                        <div class="tw-700 f-16 mt-10">Marco: <span class="tw-400 f-16">Moldura de madera nacional lacada.</span></div>
+                        <div class="tw-700 f-16 mt-10">Vidrio: <span class="tw-400 f-16">Protector incolor de 2mm.</span></div>
+                        <div class="tw-700 f-16 mt-10">Paspastú: <span class="tw-400 f-16">de 3 mm libre de acido.</span></div>
+                        <div class="tw-700 f-16 mt-10">Terminaciones: <span class="tw-400 f-16">Ganchos tipo peineta en esquinas (Según orientacion indicada).</span></div>
+                    </div>
+                </div>
+                <div class="flex mt-30 f-justify-between">
+                    <button class="pointer btnCancelar f-16 tw-600 text-center text-black" onclick="window.modal_agregarCarrito.close();">Cancelar</button>
+                    <button class="pointer btnAgreg f-16 tw-600 text-center text-white" onclick="window.modal_agregarCarrito.close(); window.modal_carrito.showModal(); agregarProducto();">Agregar al carro</button>
+                </div>
+            </dialog>
+            
+            <!-- Modal total Carrito -->
+            <dialog class="modal__carrito" id="modal_carrito">
+                <div class="flex f-direction-c f-justify-between h-100">
+                    <div>
+                        <div class="tw-700 f-18">Vista de carro</div>
+                        <div class="tw-700 f-16 mt-20">Haz agregado</div>
+                        <div class="cuadros flex g-20 mt-20">
+                            <div class="flex cuadroEnCarrito">
+                                <img  src="assets/svg/cuadroNegroBlanco.svg" alt="">
+                            </div>
+                            <div class="flex f-direction-c f-justify-between">
+                                <div>
+                                    <div class="detalle-tipo tw-700 f-16"></div>
+                                    <div class="tw-700 f-16 mt-10">Especificaciones</div>
+                                    <div class="mt-10 tw-600 f-16">Tamaño: <span class="detalle-tamaño tw-400"></span></div>
+                                    <div class="mt-5 tw-600 f-16">Modelo de marco: <span class="detalle-modelo tw-400"></span></div>
+                                    <div class="mt-5 tw-600 f-16">Color: <span class="detalle-color tw-400"></span></div>
+                                    <div class="mt-5 tw-600 f-16">Paspartu: <span class="detalle-paspartu tw-400"></span></div>
+                                    <div class="tw-600 f-16 text-center">...</div>
+                                    <!-- <div class="mt-10 tw-600 f-16">tipo Paspartu: <span class="detalle-tipoPaspartu tw-400"></span></div> -->
+                                    <!-- <div class="mt-10 tw-600 f-16">ancho Paspartu: <span class="detalle-anchoPaspartu tw-400"></span></div> -->
+                                </div>
+                                <div class="mt-5 flex f-align-items-center f-justify-between">
+                                    <div class="operacion pointer" onclick="operacion('-')">-</div>
+                                    <div class="detalle-cantidad tw-600 f-16"></div>
+                                    <div class="operacion pointer" onclick="operacion('+')">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex  mt-30 f-justify-between">
+                        <button class="pointer btn bg-black f-16 tw-600 text-center text-white" onclick="verCarrito()">Ver Carro</button>
+                        <button class="pointer btn bg-white f-16 tw-600 text-center text-black" onclick="window.modal_carrito.close(); inicio();">Agregar más productos</button>
+                    </div>
+            
+                </div>
+            </dialog>
+        </div>
+        <div style="display:none;" class="carrito">
+            <div class="separacion-cuadro">
+                <div class="container">
+                    <div class="flex f-align-items-center g-15 mt-40">
+                        <img src="assets/svg/carro.svg" alt="">
+                        <div class="f-18 os-700">TUS PRODUCTOS</div>
+                    </div>
+                    <div id="productos">
+                        
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="flex f-align-items-center g-15 mt-40">
+                        <img src="assets/svg/despacho.svg" alt="">
+                        <div class="f-18 os-700">SERVICIOS DE DESPACHO</div>
+                    </div>  
+                    <div class="tw-700 f-18 mt-20">Debes elegir un tipo de despacho</div>
+                    <div class="radio-list-carro mt-30">
+                        <div class="radio-despacho">
+                            <input type="radio" name="despacho" id="despacho-radio1" value="Vertical">
+                            <label class="os-600" for="despacho-radio1">
+                                <div class="btnCarro">
+                                    Entrega de obra y retiro de cuadro final en Tienda (sin costo)
+                                </div>
+                            </label>
+                        </div>
+                        <div class="radio-despacho mt-20">
+                            <input type="radio" name="despacho" id="despacho-radio2" value="Horizontal">
+                            <label class="os-600" for="despacho-radio2">
+                                <div class="btnCarro">
+                                    Retiro de obra y entrega de cuadro final a domicilio (costo)  
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="radio-despacho mt-20">
+                            <input type="radio" name="despacho" id="despacho-radio3" value="Horizontal">
+                            <label class="os-600" for="despacho-radio3">
+                                <div class="btnCarro">
+                                    Envio de obra y entrega de cuadro final mediante Starken. (por pagar)
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tw-700 f-18 mt-40">Informacíon importante:</div>
+                    <div class="tw-400 f-18 mt-10"><span class="tw-700 f-18">Información importante: Entrega de obra y retiro de cuadro final en Tienda ( sin costo):</span>Esto significa que tu como cliente dejes la obra en el taller y lo retires cuando esté listo.</div>
+                    <div class="tw-400 f-18 mt-10"><span class="tw-700 f-18">Retiro de obra y entrega de cuadro final a domicilio ( costo ):</span>En este caso es que se retira tu obra a tu casa y cuando esté listo, sea despachado a tu domicilio.</div>
+                    <div class="tw-400 f-18 mt-10"><span class="tw-700 f-18">Envío de obra y entrega de cuadro final mediante Starken ( por pagar):</span>En Santiago, esta opción tiene una tarifa fija, dependiendo de las tarifas de Starken.</div>
+                    <div class="flex mt-20 mb-20">
+                        <button class="bg-black text-white bg-black text-white f-18 tw-700 flex-grow btnCarroContinuar">Continuar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-black footer">
+            <div class="flex f-align-items-center g-15">
+                <img src="assets/svg/camion.svg" alt="">
+                <div class="text-white os-600 f-20">Despacho a todo chile</div>
+            </div>
+            <div class="flex f-align-items-center g-15">
+                <img src="assets/svg/time.svg" alt="">
+                <div class="text-white os-600 f-20">Tiempo estimado despacho 8 días habiles</div>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

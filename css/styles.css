@@ -14,6 +14,11 @@ body {
     margin: 0;
 }
 
+.logoPagina img{
+    width: 40%;
+    
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -106,7 +111,7 @@ body {
 .nav-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 2rem 3rem 2rem 3rem;
+    padding: 2rem 3rem 1.25rem 3rem;
     align-items: center;
     column-gap: 20px
 }
@@ -286,6 +291,14 @@ ul {
 
 .mb-40 {
     margin-bottom: 40px;
+}
+
+.mr-50{
+    margin-right: 50px;
+}
+
+.mr-100 {
+    margin-right: 100px;
 }
 
 .pl-5 {
@@ -561,13 +574,13 @@ input.medidas:focus {
 }
 
 
-.radio-paspartu [type="radio"] {
-    display: none;
-}
-
 .radio-list {
     display: flex;
     justify-content: space-between;
+}
+
+.radio-paspartu [type="radio"] {
+    display: none;
 }
 
 .radio-paspartu label {
@@ -580,6 +593,24 @@ input.medidas:focus {
 }
 
 .radio-paspartu [type="radio"]:checked+label {
+    background-color: black;
+    color: white;
+}
+
+.radio-paspartu-digital [type="radio"] {
+    display: none;
+}
+
+.radio-paspartu-digital label {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px 8px;
+    cursor: pointer;
+    color: black;
+}
+
+.radio-paspartu-digital [type="radio"]:checked+label {
     background-color: black;
     color: white;
 }
@@ -624,6 +655,11 @@ input.medidas:focus {
     outline: 5px solid #6c6969;
     outline-offset: -5px;
 }
+
+.radio-tipo [type="radio"]:checked+label div {
+    font-weight: 700;
+}
+
 
 /* radio Terminacion */
 .radio-list-terminacion {
@@ -734,7 +770,7 @@ input.medidas:focus {
     border-radius: 20px;
     padding: 40px;
     width: 40rem;
-    height: 34rem;
+    height: 39rem;
 }
 
 
@@ -822,4 +858,96 @@ input.medidas:focus {
 
 .flex-grow {
     flex-grow: 1;
+}
+
+.btnPass-impresion{
+    cursor: pointer;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+    min-width: 185px;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+
+.radio-paspartu-impresion [type="radio"] {
+    display: none;
+}
+
+.radio-paspartu-impresion [type="radio"]:checked+label div {
+    background-color: black;
+    color: white;
+}
+
+.subirImagen {
+    content: '';
+    cursor: pointer;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px 86px;
+    text-align: center;
+}
+
+.subirImagen:hover {
+    background: black;
+    color: white;
+}
+
+.input-file{
+    display: none;
+}
+
+.nombreImagen{
+    background: #D9D9D9;
+    padding: 10px 0px;
+    padding-left: 10px;
+    display: flex;
+}
+
+.imgProductoCarro{
+    width: 28%;
+}
+
+.imgProductoCarro img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.previewImg{
+    width: 286px;
+    height: 344px;
+    /* object-fit: contain; */
+    background-color: white;
+}
+
+.finalImg{
+width: 210px;
+height: 250px;
+}
+
+.paraCarroImg{
+    width: 287px;
+    height: 341px;
+    border: 1px solid black;
+}
+
+.enCarroImg{
+    width: 170px;
+    height: 130px;
+    border: 1px solid black;
+}
+
+.cantCarro{
+    padding: 3px 8px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    opacity: 0.5;
+    font-size: 14px;
+    position: relative;
+    right: 12px;
 }

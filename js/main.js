@@ -30,34 +30,44 @@ let cuadroEspec = {
 
 let totalProd = [];
 
-let productoId = 0;
+let productoId = 1;
 
-// $("#Enmarcaciones").click(function() {
-//     $("#paso-1").fadeOut();
-//     $("#paso-2").fadeIn();
-//     $("#div2").fadeIn("slow");
-//     $("#div3").fadeIn(3000);
-// });
+$("#Enmarcaciones").click(function() {
+    $("#paso-1").fadeOut();
+    $("#paso-2").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+});
 
-// $(document).ready(() => {
-//   // $(".enmarcaciones1").hide();
-//   let localTotalProd =  JSON.parse(localStorage.getItem("totalProd"));
-//   if(localTotalProd){
-//     totalProd = localTotalProd
-//     $(".cantCarro").html(totalProd.length);
-//     for(let i = 0; i < localTotalProd.length; i++){
-//       console.log(localTotalProd[i]);
-//       agregarProductoLocalStorage(localTotalProd[i])
-//     }
-//   }
-
-// });
+$(document).ready(() => {
+  // $(".enmarcaciones1").hide();
+  let localTotalProd =  JSON.parse(localStorage.getItem("totalProd"));
+  if(localTotalProd){
+    totalProd = localTotalProd;
+    if(totalProd.length > 0){
+      productoId = totalProd.length + 1;
+    }else{
+      productoId = 1;
+    }
+    $(".cantCarro").html(totalProd.length);
+    for(let i = 0; i < localTotalProd.length; i++){
+      agregarProductoLocalStorage(localTotalProd[i])
+    }
+  }
+});
 
 function agregarProductoLocalStorage(producto){
   let html = `<div class="card-producto mb-10" id="${producto.id}">
                 <div class="flex g-40">
                   <div class="img-final imgProductoCarro" class="imageContainer">
-                    <img class="enCarroImg uploadedImage${producto.id}" src="assets/svg/cuadroNegroBlanco.svg" alt="Uploaded Image">
+  `
+  if(producto.urlImg != ''){
+    html = html + `<img class="enCarroImg uploadedImage${producto.id}" src="${producto.urlImg}" alt="Uploaded Image">`
+  }
+  else{
+    html = html + `<img class="enCarroImg uploadedImage${cuadroEspec.id}" src="assets/svg/cuadroNegroBlanco.svg" alt="Uploaded Image">`
+  }
+  html = html + `
                   </div>  
                   <div>
                     <div class="tw-700 f-16">${producto.tipo}</div>
@@ -80,14 +90,14 @@ function agregarProductoLocalStorage(producto){
               `
   $("#productos").append(html);
 
-  if(producto.urlImg != ''){
-    var uploadedImage = $('.uploadedImage'+cuadroEspec.id);
-    var imageContainer = $('.imageContainer');
+  // if(producto.urlImg != ''){
+  //   var uploadedImage = $('.uploadedImage'+cuadroEspec.id);
+  //   var imageContainer = $('.imageContainer');
 
-    // Establecer la fuente (src) de la imagen usando la URL creada
-    uploadedImage.attr('src', producto.urlImg);
-    imageContainer.css('display', 'block');
-  }
+  //   // Establecer la fuente (src) de la imagen usando la URL creada
+  //   uploadedImage.attr('src', producto.urlImg);
+  //   imageContainer.css('display', 'block');
+  // }
 
 }
 
@@ -97,11 +107,9 @@ btnEnmarcaciones.addEventListener("click", function () {
   seccion = "enmarcaciones";
   cuadro = cuadro + "Enmarcaciones";
   $("." + seccion + pasoCounter).show();
-  console.log("antes: " + pasoCounter);
   pasoCounter++;
   // Esto se activa cuando se vuelve agregar un producto
   $("." + seccion + pasoCounter).show();
-  console.log(seccion + pasoCounter);
   $(`li:contains("${pasoCounter}")`).removeClass("step-prox");
   $(`li:contains("${pasoCounter}")`).addClass("step-actual");
 });
@@ -112,17 +120,14 @@ $("#btnImpresiones").click(function(){
   cuadroEspec.tipo = "Enmarcación + Impresion";
   seccion = "impresiones";
   cuadro = cuadro + "Impresiones";
-  console.log("impresion antes: " + pasoCounter);
   $("." + seccion + pasoCounter).show();
   pasoCounter++;
-  console.log("impresion despues: " + pasoCounter);
   $("."+ seccion + pasoCounter).show();
   $(`li:contains("${pasoCounter}")`).removeClass("step-prox");
   $(`li:contains("${pasoCounter}")`).addClass("step-actual");
 });
 
 $(".volver").click(() => {
-  console.log("inicio volver: " + pasoCounter);
   if (pasoCounter == 1) {
     // $(`li:contains("${pasoCounter}")`).removeClass("step-actual");
     // $(`li:contains("${pasoCounter}")`).addClass("step-prox");
@@ -137,19 +142,15 @@ $(".volver").click(() => {
     pasoCounter--;
     $("." + seccion + pasoCounter).show();
   }
-  console.log("paso Actual: " + pasoCounter)
 });
 
 $(".siguiente").click(() => {
   $("." + seccion + pasoCounter).hide();
   pasoCounter++;
-  console.log(seccion + pasoCounter);
   $("." + seccion + pasoCounter).show();
   $("." + cuadro + pasoCounter).show();
-  console.log(cuadro+pasoCounter);
   $(`li:contains("${pasoCounter}")`).removeClass("step-prox");
   $(`li:contains("${pasoCounter}")`).addClass("step-actual");
-  console.log("paso actual: " + pasoCounter);
 });
 
 $(".largo").on('blur', function () {
@@ -183,7 +184,6 @@ $(".btnColor").click(function () {
 
 $("input[name='radioAnchoPas']").change(function () {
   if ($(this).is(":checked")) {
-    console.log("valor del checked: " + $(this).val());
     $(".valorPassport").html($(this).val() + " cm")
   }
 
@@ -245,7 +245,6 @@ function agregarProducto() {
     cuadroEspec.cantidad = 1;
     productoId++;
   }
-  
    totalProd.push(cuadroEspec);
    localStorage.setItem("totalProd", JSON.stringify(totalProd));
   
@@ -292,10 +291,10 @@ function agregarProductoHTML(){
   $("#productos").append(html);
 
   if(imagenAgregado){
-    var imageURL = URL.createObjectURL(file);
+    // var imageURL = URL.createObjectURL(file);
     var uploadedImage = $('.uploadedImage'+cuadroEspec.id);
     var imageContainer = $('.imageContainer');
-    uploadedImage.attr('src', imageURL);
+    uploadedImage.attr('src', cuadroEspec.urlImg);
     imageContainer.css('display', 'block');
   }
 }
@@ -352,7 +351,6 @@ function inicio() {
 
 function verCarrito(){
   window.modal_carrito.close();
-  console.log(seccion+pasoCounter);
   inicio();
   $(".servicio").hide();
   $(".carrito").show();
@@ -360,32 +358,36 @@ function verCarrito(){
 
 function deleteProd(ProducID){
   totalProd = totalProd.filter((item) => item.id !== ProducID)
-  // totalProd.splice(ProducID,1);
   $(`#${ProducID}`).remove();
   localStorage.setItem("totalProd", JSON.stringify(totalProd));
-  console.log("totalProd: ");
-  console.log(totalProd);
   $(".cantCarro").html(totalProd.length);
+  // productoId--;
 }
 
 $('#uploadInput').on('change', function (event) {
-    imagenAgregado = true;  
-    var uploadedImage = $('.uploadedImage');
-    var imageContainer = $('.imageContainer');
+  imagenAgregado = true;  
+  var uploadedImage = $('.uploadedImage');
+  var imageContainer = $('.imageContainer');
 
-    file = event.target.files[0];
+  var file = event.target.files[0];
 
-    if (file) {
-        var imageURL = URL.createObjectURL(file);
-        console.log("imageURL: " + imageURL);
-        cuadroEspec.urlImg = imageURL 
-        uploadedImage.attr('src', imageURL);
-        imageContainer.css('display', 'block');
-    }
+  if (file) {
+    var reader = new FileReader();
 
-    var filename = $(this).val().split("\\").pop();
-    cuadroEspec.nombreImg = filename;
-    $(".nombreImagen").html(filename);
+    reader.onload = function(event) {
+      var base64String = event.target.result;
+      cuadroEspec.urlImg = base64String;
 
+      // var imageURL = URL.createObjectURL(file);
+      // cuadroEspec.urlImg = imageURL 
+      uploadedImage.attr('src', base64String);
+      imageContainer.css('display', 'block');
+    };
 
+    reader.readAsDataURL(file); // Codificar la imagen en base64
+  }
+
+  var filename = $(this).val().split("\\").pop();
+  cuadroEspec.nombreImg = filename;
+  $(".nombreImagen").html(filename);
 });

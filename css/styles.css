@@ -764,6 +764,13 @@ input.medidas:focus {
     width: 40.625rem;
     height: 37.563rem;
 }
+.modal__resolucionImagen {
+    border: none !important;
+    border-radius: 20px;
+    padding: 40px;
+    width: 40.625rem;
+    height: 37.563rem;
+}
 
 .modal__carrito {
     border: none !important;
@@ -922,6 +929,21 @@ input.medidas:focus {
     height: 344px;
     /* object-fit: contain; */
     background-color: white;
+}
+
+.imgAjuste{
+    width: 561px;
+    height: 355px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px
+}
+.previewImgAjuste{
+    max-width: 559px;
+    max-height: 355px;
+    /* object-fit: contain; */
+    background-color: white;
+    border: 1px solid black;
 }
 
 .finalImg{

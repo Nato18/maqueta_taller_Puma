@@ -8,6 +8,7 @@ let seccion = "";
 let cuadro = "cuadro";
 let imagenAgregado = false;
 let file; 
+var cropper;
 const btnEnmarcaciones = document.getElementById("btnEnmarcaciones");
 
 let cuadroEspec = {
@@ -354,7 +355,12 @@ function verCarrito(){
   inicio();
   $(".servicio").hide();
   $(".carrito").show();
-}
+};
+
+function resolucionImagen(){
+
+
+};
 
 function deleteProd(ProducID){
   totalProd = totalProd.filter((item) => item.id !== ProducID)
@@ -364,30 +370,63 @@ function deleteProd(ProducID){
   // productoId--;
 }
 
+//restablecer valor del campo
+$("#uploadInput").on("click", function(event) {
+  // Restablecer el valor del campo de carga antes de hacer clic en él
+  $(this).val(null);
+});
+
 $('#uploadInput').on('change', function (event) {
   imagenAgregado = true;  
-  var uploadedImage = $('.uploadedImage');
-  var imageContainer = $('.imageContainer');
-
+  var uploadedImage = $('.uploadedImageAjuste');
+  var imageContainer = $('.imageContainerAjuste');
   var file = event.target.files[0];
-
   if (file) {
-    var reader = new FileReader();
+    // var reader = new FileReader();
 
-    reader.onload = function(event) {
-      var base64String = event.target.result;
-      cuadroEspec.urlImg = base64String;
+    // reader.onload = function(event) {
+      // var base64String = event.target.result;
+      // cuadroEspec.urlImg = base64String;
 
-      // var imageURL = URL.createObjectURL(file);
+      var imageURL = URL.createObjectURL(file);
       // cuadroEspec.urlImg = imageURL 
-      uploadedImage.attr('src', base64String);
+      // uploadedImage.attr('src', base64String);
+      uploadedImage.attr('src', imageURL);
       imageContainer.css('display', 'block');
-    };
+      recortarImagen();
+      window.modal_resolucionImagen.showModal();
+    // };
 
-    reader.readAsDataURL(file); // Codificar la imagen en base64
+    // reader.readAsDataURL(file); // Codificar la imagen en base64
   }
 
   var filename = $(this).val().split("\\").pop();
   cuadroEspec.nombreImg = filename;
   $(".nombreImagen").html(filename);
 });
+
+function recortarImagen(){
+  var imagen = $('.uploadedImageAjuste');
+  cropper = new Cropper(imagen[0], {
+    responsive: false,
+    viewMode: 1,
+  })
+}
+
+function aceptarRecorte(){
+  var agregarImagen = $('.uploadedImage');
+  let recorte = cropper.getCroppedCanvas();
+
+  recorte.toBlob(function(blob){
+    let url_cut = URL.createObjectURL(blob);
+    agregarImagen.attr('src', url_cut);
+
+  })
+  cropper.destroy();
+  window.modal_resolucionImagen.close();
+}
+
+function cerrarPrevi(){
+  cropper.destroy();
+  window.modal_resolucionImagen.close();
+}

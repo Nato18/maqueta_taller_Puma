@@ -7,6 +7,9 @@
     <title>Taller Puma</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
 </head>
 
 <body>
@@ -257,94 +260,6 @@
                             <button class="pointer btnVolver f-16 tw-600 text-center text-black volver">Volver</button>
                             <button class="pointer btnSig f-16 tw-600 text-center text-white siguiente">Siguiente</button>
                         </div>
-                        <!--
-                        <div class="modal-container modal1" id="modal1">
-                            <div class="modal-content">
-                                <div class="flex f-justify-between mb-20 ">
-                                    <div class="tw-700 f-18">Vista de modelo</div>
-                                    <button class="cerrarModal pointer" onclick="closeModal('modal1');"><img src="assets/svg/cerrar.svg" alt=""></button>
-                                </div>
-                                <div class="flex g-40">
-                                    <div>
-                                        <div class="tw-700 f-16">Modelo 1</div>
-                                        <div class="tw-700 f-16 mt-10 mb-10">Información:</div>
-                                        <div class="tw-400 f-16">Se puede colgar horizontal o verticalmente, adaptándose al espacio disponible.</div>
-                                        <div class="tw-400 f-16">Tamaños adaptados para colgar varios para formar un conjunto.</div>
-                                        <div class="tw-400 f-16">Tamaños adaptados para colgar varios para formar un conjunto.</div>
-                                        <div class="tw-400 f-16">Gracias a la protección frontal, los marcos son más ligeros y seguros.</div>
-                                        <div class="tw-700 f-16 mt-10 mb-10">Material y cuidado:</div>
-                                        <div class="tw-400 f-16">Marco: Madera de arce<br>Protector de frente: Plástico de poliestireno<br>Cuidado: Limpiar con un plumero.</div>
-                                    </div>
-                                    <div class="flex f-justify-end f-direction-c g-40">
-                                        <img src="assets/svg/cuadroNegroBlancoModal.svg" alt="">
-                                        <div class="flex f-justify-between">
-                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
-                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
-                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="modal-container modal2" id="modal2">
-                            <div class="modal-content">
-                                <div class="flex f-justify-between mb-20 ">
-                                    <div class="tw-700 f-18">Vista de modelo</div>
-                                    <button class="cerrarModal pointer" onclick="closeModal('modal2');"><img src="assets/svg/cerrar.svg" alt=""></button>
-                                </div>
-                                <div class="flex g-40">
-                                    <div>
-                                        <div class="tw-700 f-16">Modelo 2</div>
-                                        <div class="tw-700 f-16 mt-10 mb-10">Información:</div>
-                                        <div class="tw-400 f-16">Se puede colgar horizontal o verticalmente, adaptándose al espacio disponible.</div>
-                                        <div class="tw-400 f-16">Tamaños adaptados para colgar varios para formar un conjunto.</div>
-                                        <div class="tw-400 f-16">Tamaños adaptados para colgar varios para formar un conjunto.</div>
-                                        <div class="tw-400 f-16">Gracias a la protección frontal, los marcos son más ligeros y seguros.</div>
-                                        <div class="tw-700 f-16 mt-10 mb-10">Material y cuidado:</div>
-                                        <div class="tw-400 f-16">Marco: Madera de arce<br>Protector de frente: Plástico de poliestireno<br>Cuidado: Limpiar con un plumero.</div>
-                                    </div>
-                                    <div class="flex f-justify-end f-direction-c g-40">
-                                        <img src="assets/svg/cuadroNegroBlancoModal.svg" alt="">
-                                        <div class="flex f-justify-between">
-                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
-                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
-                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-container modal3" id="modal3">
-                            <div class="modal-content">
-                                <div class="flex f-justify-between mb-20 ">
-                                    <div class="tw-700 f-18">Vista de modelo</div>
-                                    <button class="cerrarModal pointer" onclick="closeModal('modal3');"><img src="assets/svg/cerrar.svg" alt=""></button>
-                                </div>
-                                <div class="flex g-40">
-                                    <div>
-                                        <div class="tw-700 f-16">Modelo 3</div>
-                                        <div class="tw-700 f-16 mt-10 mb-10">Información:</div>
-                                        <div class="tw-400 f-16">Se puede colgar horizontal o verticalmente, adaptándose al espacio disponible.</div>
-                                        <div class="tw-400 f-16">Tamaños adaptados para colgar varios para formar un conjunto.</div>
-                                        <div class="tw-400 f-16">Tamaños adaptados para colgar varios para formar un conjunto.</div>
-                                        <div class="tw-400 f-16">Gracias a la protección frontal, los marcos son más ligeros y seguros.</div>
-                                        <div class="tw-700 f-16 mt-10 mb-10">Material y cuidado:</div>
-                                        <div class="tw-400 f-16">Marco: Madera de arce<br>Protector de frente: Plástico de poliestireno<br>Cuidado: Limpiar con un plumero.</div>
-                                    </div>
-                                    <div class="flex f-justify-end f-direction-c g-40">
-                                        <img src="assets/svg/cuadroNegroBlancoModal.svg" alt="">
-                                        <div class="flex f-justify-between">
-                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
-                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
-                                            <img src="assets/svg/cuadroNegroBlancoModalMarco.svg" alt="">
-                                        </div>
-                          
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        -->
                     </div>
             
                     <div style="display: none;" class="enmarcaciones4 container mb-40">
@@ -910,6 +825,24 @@
             </div>
         </div>
 
+        <!-- Modal ajustar resolucion de imagen -->
+        <dialog class="modal__resolucionImagen" id="modal_resolucionImagen">
+            <div class="flex f-justify-between" >
+                <div class="tw-700 f-18">Previsualización de imagen</div>
+                <img class="pointer" src="assets/svg/cerrar.svg" alt="" onclick="cerrarPrevi();" >
+            </div>
+            <div class="f-16 tw-400 mt-20">Puedes mover la imagen para ajustar a lo que necesitas.</div>
+            <div>
+                <div class="imgAjuste" class="imageContainerAjuste">
+                    <img class="previewImgAjuste uploadedImageAjuste" src="assets/svg/cuadroNegroBlanco.svg" alt="Uploaded Image">
+                </div>  
+            </div>
+            <div class="flex f-justify-center mt-20">
+                <button class="pointer btnAgreg f-16 tw-600 text-center text-white" onclick="aceptarRecorte();">Aceptar Ajuste</button>
+            </div>
+
+
+        </dialog>
         <!-- Modal agregar a carrito -->
         <dialog class="modal__agregarCarrito" id="modal_agregarCarrito">
             <div class="tw-700 f-18">Especificaciones y materiales de tu cuadro</div>
